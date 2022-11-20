@@ -18,11 +18,12 @@ class mkfil{
         for(String k : strarr){
             String newname = new String(name+Integer.toString(fn));
             fn++;
+            fdir = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir);
             File f = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir+"\\"+newname+".txt");
             if(f.exists()){
                 f.delete();
             }
-            if(!(fdir = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir)).exists()){
+            if(!fdir.exists()){
                 fdir.mkdir();
             }
             if(f.createNewFile()){

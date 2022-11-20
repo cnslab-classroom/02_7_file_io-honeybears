@@ -5,6 +5,7 @@ import java.util.*;
 class mkfil{
     static String name = "frag";
     static int fn = 1; 
+    File fdir;
     String dir;
     ArrayList<String> strarr;
     mkfil(ArrayList<String> strarr,String dir)
@@ -20,6 +21,9 @@ class mkfil{
             File f = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir+"\\"+newname+".txt");
             if(f.exists()){
                 f.delete();
+            }
+            if(!(fdir = new File(dir)).exists()){
+                fdir.mkdir();
             }
             if(f.createNewFile()){
             FileWriter fw = new FileWriter(f);

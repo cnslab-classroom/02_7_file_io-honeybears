@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+import java.nio.file.*;
 
 class mkfil{
     static String name = "frag";
@@ -18,14 +18,15 @@ class mkfil{
         for(String k : strarr){
             String newname = new String(name+Integer.toString(fn));
             fn++;
-            fdir = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir);
-            File f = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir+"\\"+newname+".txt");
+            String path = "C:\\NewJava\\02_7_file_io-honeybears\\"+dir;
+            File f = new File(path+"\\"+newname+".txt");
+            Files.createDirectories(Paths.get(path));
+            
             if(f.exists()){
                 f.delete();
             }
-            if(!fdir.exists()){
-                fdir.mkdir();
-            }
+           
+                
             if(f.createNewFile()){
             FileWriter fw = new FileWriter(f);
             fw.write(k);

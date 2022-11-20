@@ -22,7 +22,7 @@ class mkfil{
             if(f.exists()){
                 f.delete();
             }
-            if(!(fdir = new File(dir)).exists()){
+            if(!(fdir = new File("C:\\Users\\gollo\\github-classroom\\cnslab-kangwoon\\02_7_file_io-honeybears\\"+dir)).exists()){
                 fdir.mkdir();
             }
             if(f.createNewFile()){

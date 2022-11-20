@@ -32,10 +32,7 @@ class mkfil{
             fw.write(k);
             fw.flush();
             fw.close();
-            }else{
-                System.out.println("error");
             }
-
         }
        
         

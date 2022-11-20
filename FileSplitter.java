@@ -18,8 +18,8 @@ class mkfil{
         for(String k : strarr){
             String newname = new String(name+Integer.toString(fn));
             fn++;
-            String path = "C:\\NewJava\\02_7_file_io-honeybears\\"+dir;
-            File f = new File(path+"\\"+newname+".txt");
+            String path = "C:/NewJava/02_7_file_io-honeybears/"+dir;
+            File f = new File(path+"/"+newname+".txt");
             Files.createDirectories(Paths.get(path));
             
             if(f.exists()){

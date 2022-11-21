@@ -3,8 +3,8 @@ import java.util.*;
 import java.nio.file.*;
 
 class mkfil{
-    static String name = "frag";
-    static int fn = 1; 
+    String name = "frag";
+    int fn = 1; 
     File fdir;
     String dir;
     ArrayList<String> strarr;
@@ -18,7 +18,7 @@ class mkfil{
         for(String k : strarr){
             String newname = new String(name+Integer.toString(fn));
             fn++;
-            String path = "C:/NewJava/02_7_file_io-honeybears/"+dir;
+            String path = "./"+dir;
             File f = new File(path+"/"+newname+".txt");
             Files.createDirectories(Paths.get(path));
             
